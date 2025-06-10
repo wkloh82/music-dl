@@ -39,8 +39,13 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
     test_suite="tests",
-    entry_points={"console_scripts": ["music-dl = music_dl.__main__:main"]},
-    install_requires=["requests", "click", "pycryptodome", "prettytable"],
+    entry_points={
+        "console_scripts": [
+            "music-dl = music_dl.__main__:main",
+            "music-dl-gui = music_dl.gui:main",
+        ]
+    },
+    install_requires=["requests", "click", "pycryptodome", "prettytable", "PyQt6"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",

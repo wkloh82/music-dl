@@ -8,3 +8,4 @@
 
 from .__version__ import __version__
 from .__main__ import main
+from .gui import main as gui_main
